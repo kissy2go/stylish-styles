@@ -1,0 +1,51 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@import "mixins/compact";
+
+@-moz-document domain(burusoku-vip.com) {
+  /* Hide blog title */
+  .blog-title-outer { @include hidden; }
+
+  #topicks_container {
+    width: 100% !important;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* contents */
+  #content {
+    /* Hide left/right side bars */
+    #sub-l, #sub-r { @include hidden; }
+
+    /* Main contents */
+    #main {
+      float: none !important;
+      //
+      /* Hide headline/pickup articles */
+      .column-inner-2 { @include hidden; }
+
+      /* Hide banner */
+      .article-body-inner + div { @include hidden; }
+
+      /* Hide blogroll */
+      .blogroll-channel { @include hidden; }
+
+      /* Hide iframe external contents */
+      iframe { @include hidden; }
+
+      .article-body-more {
+        /* Hide social share buttons */
+        h3, h3 + div { @include hidden; }
+
+        /* Hide AD */
+        div[id^='apvad-'] { @include hidden; }
+
+        /* Hide related links */
+        .at-link { @include hidden; }
+      }
+
+      /* Hide article footer */
+      .article-footer { @include hidden; }
+    }
+  }
+}

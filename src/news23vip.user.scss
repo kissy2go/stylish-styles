@@ -1,0 +1,59 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@import "mixins/compact";
+
+@-moz-document url-prefix(http://blog.livedoor.jp/news23vip/) {
+  /* Hide header */
+  #header2 { @include hidden; }
+
+  #container {
+    border: 0 !important;
+    margin: 0 !important;
+    min-width: 0 !important;
+    width: 100%;
+
+    /* Hide blog title */
+    div[align=right] { @include hidden; }
+    .blog-title-outer { @include hidden; }
+
+    #content {
+      /* Hide left side bar */
+      #sub-c { @include hidden; }
+
+      #main {
+        float: none;
+        margin: 0;
+
+        .column-inner {
+          margin: 0 auto;
+          width: 800px;
+
+          /* Hide recent articles */
+          #recent-entry { @include hidden; }
+
+          /* Hide prev/next article pager */
+          .pager { @include hidden; }
+
+          .article-outer {
+            .article-body {
+              /* Hide Amazon link */
+              a[name=amazletlink] { @include hidden; }
+
+              /* Hide related artivles */
+              div[id^=ldblog_related_articles] { @include hidden; }
+            }
+
+            /* Hide footer */
+            .article-footer { @include hidden; }
+          }
+
+          /* Hide AD */
+          div[id^=karbppp] { @include hidden; }
+        }
+      }
+    }
+
+    /* Hide footer */
+    .footer-outer { @include hidden; }
+  }
+}

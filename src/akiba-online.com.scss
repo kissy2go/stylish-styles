@@ -1,0 +1,16 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@import "mixins/compact";
+
+@-moz-document domain(akiba-online.com) {
+  /* Hide Header */
+  header { @include hidden; }
+  /* Hide AD */
+  #center_ad { @include hidden; }
+  /* Hide Notices */
+  #Notices { @include hidden; }
+
+  #content.thread_view {
+    padding-top: 15px;
+  }
+}

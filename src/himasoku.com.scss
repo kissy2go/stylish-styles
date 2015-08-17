@@ -1,0 +1,67 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@import "mixins/compact";
+
+@-moz-document domain(himasoku.com) {
+  body {
+    background: #d9fffd;
+  }
+
+  /* Hide blog title */
+  .blog-title-outer { @include hidden; }
+
+  #content {
+    /* Hide side bar */
+    #sub, #extra { @include hidden; }
+
+    #main {
+      float: none;
+    }
+
+    .column-inner {
+      /* Hide headline */
+      & > .column-inner-2, & > .column-inner-2 + font > a:first-child { @include hidden; }
+
+      /* Hide popular artilcles */
+      .popularArticlesWithImage.tag.A { @include hidden; }
+
+      /* Hide prev/next link pager */
+      .pager { @include hidden; }
+
+      .article-body {
+        /* Hide social share link */
+        .dashed { @include hidden; }
+
+        /* Hide banner */
+        .article-body-inner + br + a { @include hidden; }
+      }
+
+      .article-body-more {
+        /* Hide external contents and banner */
+        & > iframe { @include hidden; }
+        & > iframe + div { @include hidden; }
+        & > iframe + br + span { @include hidden; }
+        & > dl > iframe { @include hidden; }
+        & > dl > iframe + br + span { @include hidden; }
+        & > dl > span[id*=res]:last-of-type > dd > span:last-of-type { @include hidden; }
+        .t_b > span { @include hidden; }
+
+        /* Hide pickup artiles */
+        .netabare, .akares { @include hidden; }
+
+        /* Hide iframe contents */
+        iframe { @include hidden; }
+
+        & > img, & > div:last-child { @include hidden; }
+      }
+
+      .article-footer {
+        /* Hide social share link */
+        .dashed2 { @include hidden; }
+      }
+    }
+  }
+
+  /* Hide Nija tools */
+  #NnVD { @include hidden; }
+}

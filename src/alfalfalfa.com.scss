@@ -1,0 +1,73 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@import "mixins/compact";
+
+@-moz-document domain(alfalfalfa.com) {
+  body {
+    width: 100%;
+  }
+
+  /* Hide header */
+  #matomeSiteHeaderArea, header#header { @include hidden; }
+
+  /* Left side contents */
+  .container_l {
+    display: block;
+    width: 100%;
+
+    /* Hide left side bar */
+    #left { @include hidden; }
+
+    /* Main contents */
+    #content {
+      float: none;
+      margin: 0 auto;
+
+      /* Hide tags */
+      .posted4 { @include hidden; }
+      /* Hide headlines */
+      .fullbody { @include hidden; }
+
+      /* Article body */
+      #articlebody {
+        //
+        #main.main {
+          /* Hide related articles */
+          #related-title, #mainmore { @include hidden; }
+        }
+        //
+        #mainmore.mainmore {
+          /* Hide AD */
+          .main_adsense_right { @include hidden; }
+          /* Hide related articles */
+          #related-title, #mainmore { @include hidden; }
+        }
+
+        /* Hide social buttons */
+        .social_buttons, .social_buttons_another { @include hidden; }
+
+        /* Hide related articles */
+        .section-rss { @include hidden; }
+
+        /* Hide category links */
+        .menu { @include hidden; }
+
+        /* Hide prev/next article link*/
+        .mv { @include hidden; }
+
+        /* Hide pickup articles */
+        #related-title, .rr { @include hidden; }
+
+        /* Hide tweet via twitter */
+        .tweet_bt { @include hidden; }
+
+        /* Hide mutual links */
+        .Hleft3 { @include hidden; }
+      }
+    }
+  }
+
+  /* Right side contents */
+  /* Hide right side bar */
+  .container_r { @include hidden; }
+}

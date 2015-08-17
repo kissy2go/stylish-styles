@@ -1,0 +1,69 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@import "mixins/compact";
+
+@-moz-document url-prefix(http://blog.livedoor.jp/nicovip2ch/) {
+  #containerWrap {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+
+  #container {
+    /* Hide blog title */
+    .blog-title-outer { @include hidden; }
+
+    /* Hide external news articles */
+    .entry_box_left22, .entry_box_right22 { @include hidden; }
+
+    #content {
+      /* Hide left/right side bar */
+      #sub, #extra { @include hidden; }
+
+      #main {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        width: 800px;
+
+        .column-inner {
+          margin: 0 auto;
+
+          /* Hide external news articles */
+          .entry_box101 { @include hidden; }
+
+          .article-outer {
+            .article-body {
+              /* Hide external news articles */
+              .entry_box110 { @include hidden; }
+
+              .article-body-more {
+                /* Hide external news articles */
+                .entry_box1001 { @include hidden; }
+
+                /* Hide AD */
+                & > .t_h.t_i, & > .t_b.t_i { @include hidden; }
+              }
+            }
+          }
+
+          /* Hide external news articles */
+          .entry_text22, .entry_box10 { @include hidden; }
+
+          #article-options {
+            /* Hide external news articles */
+            & > p, div[id^=ldblog_related_articles] { @include hidden; }
+          }
+
+          /* Hide prev/next article pager */
+          .pager { @include hidden; }
+        }
+      }
+    }
+  }
+
+  /* Hide footer */
+  .footer-outer-2 { @include hidden; }
+
+  /* Hide Nija tools */
+  #NnVD { @include hidden; }
+}
