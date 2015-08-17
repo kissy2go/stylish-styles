@@ -1,0 +1,59 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@import "mixins/compact";
+
+@-moz-document url-prefix(http://blog.livedoor.jp/nwknews/) {
+  #container {
+    /* Hide blog title */
+    .blog-title-outer { @include hidden; }
+    /* Hide navigation bar */
+    #nav { @include hidden; }
+
+    #content {
+      width: 800px;
+      margin: 0 auto;
+
+      /* Hide left/right side bar */
+      #sub, #extra { @include hidden; }
+
+      #main {
+        .column-inner {
+          margin: 0;
+        }
+
+        /* Hide external article links */
+        .column-inner-2 > table { @include hidden; }
+        /* Hide AD */
+        div[id^=google-user-ad] { @include hidden; }
+        /* hide prev/next article pager */
+        .pager { @include hidden; }
+
+        .article-outer {
+          /* Hide social share links */
+          .article-tool-box-header { @include hidden; }
+
+          .article-body {
+            .article-body-more {
+              /* Hide related articles */
+              & > b { @include hidden; }
+            }
+          }
+
+          /* Hide footer */
+          .article-footer { @include hidden; }
+          /* Hide AD */
+          .google-2ad { @include hidden; }
+          /* Hide topics*/
+          #ld-topics { @include hidden; }
+          /* Hide related articles */
+          div[id^=ldblog_related_articles] { @include hidden; }
+        }
+      }
+    }
+  }
+
+  /* Hide external article links */
+  .popularArticlesWithImage.tag.A { @include hidden; }
+  /* Hide footer */
+  .footer-outer { @include hidden; }
+}
