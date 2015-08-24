@@ -1,0 +1,8 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@import "mixins/compact";
+
+@-moz-document domain(99files.net) {
+  /* Hide ADs */
+  .ad1 { @include hidden; }
+}
