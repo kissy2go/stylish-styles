@@ -47,7 +47,7 @@
         .t_b > span { @include hidden; }
 
         /* Hide pickup artiles */
-        .netabare, .akares { @include hidden; }
+        .netabare, .netabare + .akares { @include hidden; }
 
         /* Hide iframe contents */
         iframe { @include hidden; }
